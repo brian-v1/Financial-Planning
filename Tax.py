@@ -385,8 +385,8 @@ def nu_tax(income):
 
 ### Tax Calculation
 
-income = 550000
-province = "New Brunswick"
+income = 1000000
+province = "Alberta"
 
 prov_list = ["Ontario", "Newfoundland and Labrador", "Prince Edward Island", "Nova Scotia", "New Brunswick", "Quebec", "Manitoba", "Saskatchewan", "Alberta", "British Columbia", "Yukon", "Northwest Territories", "Nunavut"]
 

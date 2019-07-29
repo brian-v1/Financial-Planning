@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<Title>Tax Calculator</Title>
+<Head>
+  <h1>Canada Personal Income Tax Calculator</h1>
+</Head>
+<br>
+<Body>
+  <h3>Enter your information below to calculator your personal income tax:</h3>
+  <section>
+  <form action="Tax.py" method="POST">
+    <label for="province">Province: </label>
+      <input id="province" list="provinces" required>
+      <datalist id="provinces">
+        <option value="Alberta">
+        <option value="British Columbia">
+        <option value="Manitoba">
+        <option value="New Brunswick">
+        <option value="Newfoundland and Labrador">
+        <option value="Northwest Territories">
+        <option value="Nova Scotia">
+        <option value="Nunavut">
+        <option value="Ontario">
+        <option value="Prince Edward Island">
+        <option value="Quebec">
+        <option value="Saskatchewan">
+        <option value="Yukon">
+      </datalist>
+    <br>
+    <br>
+    <label for="income">Income: </label>
+    <input id="income" name="income" type="number" min="0" required>
+    <br>
+    <br>
+    <input type="Submit" name="Submit">
+  </form>
+  </section>
+
+
+
+
+
+
+    
+</Body>

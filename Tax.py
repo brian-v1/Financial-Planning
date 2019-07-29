@@ -383,10 +383,16 @@ def nu_tax(income):
 
 
 
-### Tax Calculation
+### Form import from HTML
 
-income = 1000000
-province = "Alberta"
+import cgi, cgitb
+form = cgi.FieldStorage()
+province = form.getvalue("province")
+income = form.getvalue("income")
+
+
+
+### Tax Calculation
 
 prov_list = ["Ontario", "Newfoundland and Labrador", "Prince Edward Island", "Nova Scotia", "New Brunswick", "Quebec", "Manitoba", "Saskatchewan", "Alberta", "British Columbia", "Yukon", "Northwest Territories", "Nunavut"]
 
@@ -397,7 +403,20 @@ prov_index = prov_list.index(province)
 fed_tax = fed_tax(income)
 prov_tax = prov_tax_list[prov_index]
 total_tax = fed_tax + prov_tax
-print(total_tax)
+
+
+
+### Form Output to HTML
+print "Content-type:text/html\r\n\r\n"
+print("<html>")
+print("<head>")
+print("<title>Personal Tax Calculator</title>")
+print("</head>")
+print("<body>")
+print ("<h2> Your personal income is %s</h2>" % total_tax)
+print("</body>")
+print("</html>")
+
 
 
 

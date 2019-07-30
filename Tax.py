@@ -1,4 +1,18 @@
-### Federal Tax 2019
+#!C:\Users\brian\AppData\Local\Programs\Python\Python37\python.exe
+# Import modules for CGI handling
+import cgi, cgitb
+
+# Create Instance of FieldStorage
+form = cgi.FieldStorage()
+
+# Get data from fields
+province = form.getvalue("province")
+income = form.getvalue("income")
+
+print(province)
+print(income)
+
+# Federal Tax 2019
 
 fed_rate_1 = 0.15
 fed_rate_2 = 0.205
@@ -28,7 +42,7 @@ def fed_tax(income):
 
 
 
-### Provincial Tax Ontario 2019
+# Provincial Tax Ontario 2019
 
 on_rate_1 = 0.0505
 on_rate_2 = 0.0915
@@ -58,7 +72,7 @@ def on_tax(income):
 
 
 
-### Provincial Tax Newfoundland and Labrador 2019
+# Provincial Tax Newfoundland and Labrador 2019
 
 nl_rate_1 = 0.087
 nl_rate_2 = 0.145
@@ -88,7 +102,7 @@ def nl_tax(income):
 
 
 
-### Provincial Tax Prince Edward Island 2019
+# Provincial Tax Prince Edward Island 2019
 
 pe_rate_1 = 0.098
 pe_rate_2 = 0.138
@@ -108,7 +122,7 @@ def pe_tax(income):
 
 
 
-### Provincial Tax Nova Scotia 2019
+# Provincial Tax Nova Scotia 2019
 
 ns_rate_1 = 0.0879
 ns_rate_2 = 0.1495
@@ -138,7 +152,7 @@ def ns_tax(income):
 
 
 
-### Provincial Tax New Brunswick 2019
+# Provincial Tax New Brunswick 2019
 
 nb_rate_1 = 0.0968
 nb_rate_2 = 0.1482
@@ -169,7 +183,7 @@ def nb_tax(income):
 
 
 
-### Provincial Tax Quebec 2019
+# Provincial Tax Quebec 2019
 
 qc_rate_1 = 0.15
 qc_rate_2 = 0.20
@@ -194,7 +208,7 @@ def qc_tax(income):
 
 
 
-### Provincial Tax Manitoba 2019
+# Provincial Tax Manitoba 2019
 
 mb_rate_1 = 0.108
 mb_rate_2 = 0.1275
@@ -214,7 +228,7 @@ def mb_tax(income):
 
 
 
-### Provincial Tax Saskatchewan 2019
+# Provincial Tax Saskatchewan 2019
 
 sk_rate_1 = 0.105
 sk_rate_2 = 0.125
@@ -235,7 +249,7 @@ def sk_tax(income):
 
 
 
-### Provincial Tax Alberta 2019
+# Provincial Tax Alberta 2019
 
 ab_rate_1 = 0.1
 ab_rate_2 = 0.12
@@ -266,7 +280,7 @@ def ab_tax(income):
 
 
 
-### Provincial Tax British Columbia 2019
+# Provincial Tax British Columbia 2019
 
 bc_rate_1 = 0.0506
 bc_rate_2 = 0.077
@@ -302,7 +316,7 @@ def bc_tax(income):
 
 
 
-### Provincial Tax Yukon 2019
+# Provincial Tax Yukon 2019
 
 yt_rate_1 = 0.064
 yt_rate_2 = 0.09
@@ -333,7 +347,7 @@ def yt_tax(income):
 
 
 
-### Provincial Tax Northwest Territories 2019
+# Provincial Tax Northwest Territories 2019
 
 nt_rate_1 = 0.059
 nt_rate_2 = 0.086
@@ -358,7 +372,7 @@ def nt_tax(income):
 
 
 
-### Provincial Tax Nunavut 2019
+# Provincial Tax Nunavut 2019
 
 nu_rate_1 = 0.04
 nu_rate_2 = 0.07
@@ -383,16 +397,7 @@ def nu_tax(income):
 
 
 
-### Form import from HTML
-
-import cgi, cgitb
-form = cgi.FieldStorage()
-province = form.getvalue("province")
-income = form.getvalue("income")
-
-
-
-### Tax Calculation
+# Tax Calculation
 
 prov_list = ["Ontario", "Newfoundland and Labrador", "Prince Edward Island", "Nova Scotia", "New Brunswick", "Quebec", "Manitoba", "Saskatchewan", "Alberta", "British Columbia", "Yukon", "Northwest Territories", "Nunavut"]
 
@@ -406,8 +411,8 @@ total_tax = fed_tax + prov_tax
 
 
 
-### Form Output to HTML
-print "Content-type:text/html\r\n\r\n"
+# Form Output to HTML
+print("Content-type:text/html\r\n\r\n")
 print("<html>")
 print("<head>")
 print("<title>Personal Tax Calculator</title>")

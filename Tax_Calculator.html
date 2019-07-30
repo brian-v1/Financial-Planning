@@ -7,9 +7,9 @@
 <Body>
   <h3>Enter your information below to calculator your personal income tax:</h3>
   <section>
-  <form action="/cgi-bin/tax.py" method="POST" target="_blank">
+  <form action="/cgi-bin/import.py" method="POST" target="_blank">
     <label for="province">Province: </label>
-      <input id="province" list="provinces" required>
+      <input type="text" id="province" list="provinces" name="province" required>
       <datalist id="provinces">
         <option value="Alberta"></option>
         <option value="British Columbia"></option>

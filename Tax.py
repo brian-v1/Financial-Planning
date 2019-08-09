@@ -1,4 +1,3 @@
-#!C:\Users\brian\AppData\Local\Programs\Python\Python37\python.exe
 # Import modules for CGI handling
 import cgi, cgitb
 
@@ -9,8 +8,6 @@ form = cgi.FieldStorage()
 province = form.getvalue("province")
 income = form.getvalue("income")
 
-print(province)
-print(income)
 
 # Federal Tax 2019
 
@@ -412,13 +409,13 @@ total_tax = fed_tax + prov_tax
 
 
 # Form Output to HTML
-print("Content-type:text/html\r\n\r\n")
+print "Content-type:text/html\r\n\r\n"
 print("<html>")
 print("<head>")
 print("<title>Personal Tax Calculator</title>")
 print("</head>")
 print("<body>")
-print ("<h2> Your personal income is %s</h2>" % total_tax)
+print ("<h2>Your personal income is %s</h2>" % total_tax)
 print("</body>")
 print("</html>")
 
